@@ -1,0 +1,14 @@
+<nav class="light-blue lighten-1">
+    <div class="nav-wrapper">
+        <a href="{{ site.baseurl }}" class="brand-logo">Robber Barons Project</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% for person in site.posts %}
+                <li>
+                    <a href="{{ person.url | prepend: site.baseurl }}">
+                        {{ person.fname }} {{ person.lname }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
