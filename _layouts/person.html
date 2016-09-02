@@ -1,4 +1,47 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="container">
+    <div class="row">
+        <p>
+            {{ page.description }}
+        </p>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <h5 class="center{% if page.type == "captain" %} bold{% endif %}">
+                Captain of Industry
+            </h5>
+        </div>
+        <div class="col s6">
+            <h5 class="center{% if page.type == "baron" %} bold{% endif %}">
+                Robber Baron
+            </h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <ul class="browser-default">
+                {% for reason in page.captain %}
+                    <li>
+                        {{ reason }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col s6">
+            <ul class="browser-default">
+                {% for reason in page.baron %}
+                    <li>
+                        {{ reason }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            {{ page.conclusion }}
+        </p>
+    </div>
+</div>

@@ -1,6 +1,32 @@
 ---
 layout: default
 ---
-<h1>
-    Robber Barons Project
-</h1>
+<div class="container">
+    <div class="row">
+        <p>
+            Many of the entrepreneurs of the Industrial Revolution could be considered either robber barons or captains of industry.
+            Robber barons are considered people who exploit other people in order for their business to run properly.
+            On the contrary, captains of industry are people who effectively run their businesses and benefit the whole country through them.
+            Some people were both robber barons and captains of industry in different ways, and others were only one or the other.
+            This presentation will explore influential entrepreneurs of the Industrial Revolution and determine if they were robber barons or if they were captains of industry.
+        </p>
+    </div>
+    {% for person in site.posts %}
+        <div class="row">
+            <hr />
+            <h4>
+                <a href="{{ person.url | prepend: site.baseurl }}">
+                    {{ person.fname }} {{ person.lname }}
+                </a>
+            </h4>
+            <div class="excerpt-container">
+                <p class="excerpt">
+                    {{ person.description }}
+                </p>
+                <a href="{{ person.url | prepend: site.baseurl }}" class="view-full">
+                    Click to view full page
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
