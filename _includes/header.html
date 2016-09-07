@@ -7,7 +7,7 @@
         </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% for person in site.posts %}
-                <li>
+                <li{% if person.permalink == page.permalink %} class="active"{% endif %}>
                     <a href="{{ person.url | prepend: site.baseurl }}">
                         {{ person.fname }} {{ person.lname }}
                     </a>
