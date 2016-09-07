@@ -1,0 +1,29 @@
+---
+layout: default
+title: Information Sources
+permalink: /sources
+sources:
+- http://www.pbs.org/wgbh/amex/carnegie/peopleevents/pande01.html
+- http://plato.stanford.edu/entries/egalitarianism/
+- http://www.pbs.org/wgbh/americanexperience/features/biography/rockefellers-john/
+- http://www.history.com/topics/cornelius-vanderbilt
+- https://www.britannica.com/biography/George-M-Pullman
+---
+<div class="container">
+    <div class="row">
+        <h4>
+            Information Sources
+        </h4>
+    </div>
+    <div class="row">
+        <ul class="browser-default">
+            {% for source in page.sources %}
+                <li>
+                    <a href="{{ source }}">
+                        {{ source }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

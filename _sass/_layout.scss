@@ -28,3 +28,11 @@
 .excerpt-container .view-full:hover, .excerpt-container .view-full:active {
     opacity: 1;
 }
+main {
+    flex: 1 0 auto;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col s4">
+            <p>
+                This is a project for a US History project on the Industrial Revolution.
+                Sources for the project can be found at
+                <a class="grey-text text-lighten-2" href="https://github.com/zachdeibert/RobberBaronsProject/">
+                    https://github.com/zachdeibert/RobberBaronsProject/
+                </a>
+                .
+            </p>
+        </div>
+        <div class="col s1"></div>
+        <div class="col s3">
+            <ul class="browser-default">
+                {% for person in site.posts %}
+                    <li>
+                        <a class="grey-text text-lighten-2" href="{{ person.url | prepend: site.baseurl }}">
+                            {{ person.fname }} {{ person.lname }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col s1"></div>
+        <div class="col s3">
+            <p>
+                Sources for the information in this site can be found on the
+                <a class="grey-text text-lighten-2" href="{{ "/sources" | prepend: site.baseurl }}">
+                    sources page
+                </a>
+                .
+            </p>
+        </div>
+    </div>
+</div>
+<div class="footer-copyright">
+    <div class="container">
+        &copy; 2016 Zach Deibert.
+        All Rights Reserved.
+    </div>
+</div>
